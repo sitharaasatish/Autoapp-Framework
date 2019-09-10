@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 	<body>
+										<h1>Show SingleSelect Dropdown:</h1>
 
 		<select id='singleselect'>
 			<option value="volvo">Volvo</option>
@@ -13,17 +15,43 @@
 			<option value="Mahindra">Mahindra</option>
 			<option value="ho">Honda</option>
 		</select>
+		<h1>Show TextBoxes:</h1>
+		<form action="/action_page.php">
+First name: <input type="text" name="FirstName" value="Mickey">
+				<br>
+Last name: <input type="text" name="LastName" value="Mouse">
+						<br>
+							<input type="submit" value="Submit">
+							</form>
+									<h1>Show Multiselect Dropdown:</h1>
 
-		<select multiple id='multiselect'>
-			<option value="volvo">Volvo</option>
-			<option value="saab">Saab</option>
-			<option value="opel">Opel</option>
-			<option value="audi">Audi</option>
-			<option value="maruti">maruti</option>
-			<option value="hyundai">hyundai</option>
-			<option value="Kia">Kia</option>
-			<option value="Mahindra">Mahindra</option>
-			<option value="ho">Honda</option>
-		</select>
-	</body>
-</html>
+							<select multiple id='multiselect'>
+								<option value="volvo">Volvo</option>
+								<option value="saab">Saab</option>
+								<option value="opel">Opel</option>
+								<option value="audi">Audi</option>
+								<option value="maruti">maruti</option>
+								<option value="hyundai">hyundai</option>
+								<option value="Kia">Kia</option>
+								<option value="Mahindra">Mahindra</option>
+								<option value="ho">Honda</option>
+							</select>
+<h1>Show checkboxes:</h1>
+
+<form action="/action_page.php">
+  <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+  <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+  <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>Radio Buttons</h2>
+
+<form>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other  
+</form> 
+						</body>
+					</html>
+					
