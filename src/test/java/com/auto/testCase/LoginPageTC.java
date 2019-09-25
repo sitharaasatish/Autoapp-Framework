@@ -11,7 +11,7 @@ import com.auto.config.Config;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Login {
+public class LoginPageTC {
 	@Test
 	public void login() {
 		Config conf = new Config(); 

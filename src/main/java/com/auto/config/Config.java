@@ -1,35 +1,34 @@
 package com.auto.config;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 
-import org.testng.annotations.Test;
+import org.apache.log4j.Logger;
 
 public class Config {
-	public Config() {
-		loadConfig();
-		setValues();
-	}
-	private Properties projectConfigprop = new Properties();
-
-	public String AppURL;
-	public String Username;
-	public String Password;
-
-	private void loadConfig() {
+	
+	public static Logger log = Logger.getLogger(Config.class);
+	static Properties configProperties ;
+	public static Properties loadConfigProperties() {
 		try {
-			projectConfigprop.load(new FileInputStream("config.properties"));
-			// browserProp.load(new FileInputStream(" "));
-		} catch (Exception e) {
-			System.out.println("ERROR Reading the config file");
+			configProperties = new Properties();
+			FileInputStream fis = new FileInputStream("config.properties");
+			log.info("Loaded the config.properties file to FileInputStream Successfully");
+			configProperties.load(fis);
+			log.info("Loaded the config.properties file to FileInputStream to properties successfully");
+		} catch (FileNotFoundException e) {
+			log.error("config.properties FILE not found");
+			e.printStackTrace();
+		} catch (IOException e) {
+			log.error("Unable to Read config.properties");
+			e.printStackTrace();
 		}
+		return configProperties;
 	}
 
-	private void setValues() {
-			AppURL = System.getProperty("AppURL");
-			Username = System.getProperty("Username");
-			Password = System.getProperty("Password");
-		}
+
 
 }
 

@@ -1,5 +1,8 @@
 package com.auto.pageObjects;
 
-public class Home_Page {
+import com.auto.base.TestBase;
+
+public class Home_Page extends TestBase{
+	
 
 }
